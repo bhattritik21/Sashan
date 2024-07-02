@@ -83,7 +83,7 @@ function App() {
           <img
             className={clickedImage === 1 ? "imageClicked" : "Image"}
             src={imageUrl1}
-            alt="Google Drive Image"
+            alt="Yes card"
             onClick={() => {
               setImage("Yes");
               setClickedImage(1);
@@ -92,7 +92,7 @@ function App() {
           <img
             className={clickedImage === 2 ? "imageClicked" : "Image"}
             src={imageUrl2}
-            alt="Google Drive Image"
+            alt="No card"
             onClick={() => {
               setImage("No");
               setClickedImage(2);
