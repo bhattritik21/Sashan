@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  background-color: #0e0e0f;
+  min-height: 100vh;
+  display: flex;
+}
+.cards{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    padding: 100px 10px;
+}
+
+.Image{
+  height: 500px;
+  width: 400px;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.imageClicked{
+  height: 500px;
+  width: 400px;
+  border: 2px solid yellow;
+  cursor: pointer;
+}
+
