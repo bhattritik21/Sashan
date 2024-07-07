@@ -10,7 +10,7 @@ function App() {
 
   const fetchImage = async (fileUrl, id) => {
     try {
-      const response = await fetch("https://sashan.vercel.app/api/image", {
+      const response = await fetch("/api/image", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
