@@ -38,7 +38,7 @@ app.post('/api/image', async (req, res) => {
 // Serve React app for all other routes
 app.get('/', (req, res) => {
   //res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-   res.send('');
+   res.send('Hello');
 });
 
 app.listen(port, () => {
