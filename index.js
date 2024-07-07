@@ -11,7 +11,13 @@ const port = process.env.PORT || 8000;
 // const __dirname = path.resolve();
 
 // app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(cors());
+app.use(cors(
+  {
+    origin: ['http://localhost:3000'],
+    methods: ['GET', 'POST'],
+    credentials:true,
+  }
+));
 app.use(express.json());
 
 app.post('/api/image', async (req, res) => {
