@@ -11,7 +11,7 @@ const port = process.env.PORT || 8000;
 const __dirname = path.resolve();
 
 app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(cors());
+app.use(cors({ origin: 'https://sashan.vercel.app', methods: ['GET', 'POST'], allowedHeaders: ['Content-Type'], }));   
 app.use(express.json());
 
 app.post('/api/image', async (req, res) => {
