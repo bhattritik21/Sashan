@@ -11,13 +11,13 @@ const port = process.env.PORT || 8000;
 // const __dirname = path.resolve();
 
 // app.use(express.static(path.join(__dirname, 'client/build')));
-app.use(cors(
-  {
-    origin: ['http://localhost:3000'],
-    methods: ['GET', 'POST'],
-    credentials:true,
-  }
-));
+const corsOptions = {
+  origin: 'http://localhost:3000', // Allow requests from this origin (your frontend during development)
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allow these HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow these headers
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post('/api/image', async (req, res) => {
