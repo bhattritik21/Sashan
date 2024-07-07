@@ -40,6 +40,10 @@ app.post('/api/image', async (req, res) => {
     res.status(500).send('Error fetching image');
   }
 });
+app.get('/api/name', (req, res) => {
+  const name = 'John Doe'; // Replace with your desired name or data retrieval logic
+  res.json({ name });
+});
 
 // Serve React app for all other routes
 app.get('/', (req, res) => {
