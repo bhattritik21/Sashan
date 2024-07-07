@@ -1,16 +1,16 @@
 // server.js or index.js
 
 import express from 'express';
-import path from 'path';
+//import path from 'path';
 import fetch from 'node-fetch';
 import cors from 'cors';
 
 const app = express();
 const port = process.env.PORT || 8000;
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname, 'client/build')));
+// app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(cors());
 app.use(express.json());
 
@@ -36,8 +36,9 @@ app.post('/api/image', async (req, res) => {
 });
 
 // Serve React app for all other routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+app.get('/', (req, res) => {
+  //res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+   res.send('');
 });
 
 app.listen(port, () => {
